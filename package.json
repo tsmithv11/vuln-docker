@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "express": "4.15.5"
+    "express": "4.15.5",
+    "y18n": "3.2.1"
   },
   "devDependencies": {},
   "scripts": {
