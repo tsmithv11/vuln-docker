@@ -1,8 +1,8 @@
 FROM vulhub/node:8.5.0
 
-MAINTAINER phithon <root@leavesongs.com>
+MAINTAINER joe
 
-COPY package.json package-lock.json /usr/src/
+ADD package.json package-lock.json /usr/src/
 
 RUN set -ex \
     && cd /usr/src \
@@ -11,3 +11,5 @@ RUN set -ex \
 WORKDIR /usr/src
 
 CMD ["npm", "run", "start"]
+
+EXPOSE 22
