@@ -1,7 +1,5 @@
 FROM vulhub/node:8.5.0
 
-MAINTAINER joe
-
 ADD package.json package-lock.json /usr/src/
 
 RUN set -ex \
