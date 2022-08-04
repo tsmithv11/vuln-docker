@@ -18,7 +18,7 @@ jobs:
           quiet: true # optional: display only failed checks
           soft_fail: true # optional: do not return an error code if there are failed checks
           log_level: DEBUG # optional: set log level. Default WARNING
-          docker-image: $IMAGE_NAME # define the name of the image to scan
-          dockerfile-path: $IMAGE_PATH # path to the Dockerfile
+          docker_image: $IMAGE_NAME # define the name of the image to scan
+          dockerfile_path: $IMAGE_PATH # path to the Dockerfile
           container_user: 1000 # optional: Define what UID and / or what GID to run the container under to prevent permission issues
           api-key: ${{ secrets.BC_API_KEY }} # Bridgecrew API key stored as a GitHub secret
