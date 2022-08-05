@@ -13,3 +13,4 @@ WORKDIR /usr/src
 CMD ["npm", "run", "start"]
 
 EXPOSE 22
+
