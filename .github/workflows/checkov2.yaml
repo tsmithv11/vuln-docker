@@ -1,0 +1,20 @@
+on: [push]
+
+jobs:
+  checkov-job:
+    runs-on: ubuntu-latest
+    name: checkov-action
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@master
+
+      - name: Run Checkov action
+        id: checkov
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: .
+          framework: dockerfile
+          output_format: sarif
+          log_level: DEBUG # optional: set log level. Default WARNING
+          api-key: ${{ secrets.BC_API_KEY }}
+          
