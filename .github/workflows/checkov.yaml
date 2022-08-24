@@ -13,7 +13,7 @@ jobs:
         run: docker build -t ${{ env.IMAGE_NAME }} ${{ env.IMAGE_PATH }}
       - name: Run Checkov action
         id: checkov
-        uses: bridgecrewio/checkov-action@docker-image-scan
+        uses: bridgecrewio/checkov-action@master
         with:
           quiet: true # optional: display only failed checks
           soft_fail: true # optional: do not return an error code if there are failed checks
